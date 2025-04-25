@@ -217,3 +217,27 @@ header .container .logos:hover .logoHover {
   margin: 2rem auto;
   text-align: center;
 }
+
+/* #sobre-mi .habilidades .hard-skills, #sobre-mi .habilidades .study{
+  background-color: var(--clr-dark);
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+} */
+
+#sobre-mi .habilidades .hard-skills{
+  display: flex;
+  justify-content: left;
+}
+
+#sobre-mi .habilidades .study{
+  display: flex;
+  justify-content: end;
+}
+
+#sobre-mi .habilidades ul{
+  background-color: var(--clr-dark);
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+} 
