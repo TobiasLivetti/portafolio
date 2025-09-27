@@ -225,19 +225,63 @@ header .container .logos:hover .logoHover {
   flex-direction: row;
 } */
 
+#sobre-mi .habilidades{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#sobre-mi .habilidades img{
+  width: 4rem;
+}
+
 #sobre-mi .habilidades .hard-skills{
+  background-color: var(--clr-dark);
+  width: 75vw;
+  padding: 0.5rem;
   display: flex;
   justify-content: left;
+  border-radius: 0px 15px 15px 0px ; 
 }
 
 #sobre-mi .habilidades .study{
+  background-color: var(--clr-dark);
+  width: 75vw;
+  margin-left: auto;
+  padding: 0.5rem;
   display: flex;
   justify-content: end;
+  border-radius: 15px 0px 0px 15px ; 
 }
 
+#sobre-mi .habilidades .hard-skills h3, #sobre-mi .habilidades .study h3{
+  margin: 1rem ;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* margenes individuales */
+#sobre-mi .habilidades .hard-skills h3{
+  margin-left: 15vw;
+}
+#sobre-mi .habilidades .study h3{
+  margin-right: 15vw;
+}
+
+
 #sobre-mi .habilidades ul{
-  background-color: var(--clr-dark);
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  padding: 0 2rem;
+  width: 100%;
 } 
+
+
+#sobre-mi .habilidades ul li{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
