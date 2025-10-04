@@ -2,11 +2,17 @@
 
 :root{
     --clr-gold: #deb16d;
+    --clr-gold-dark: #b4883e;
     --clr-dark: #131313;
     --clr-grey: #e4e4e4;
     --clr-white: #fafafa;
     --clr-background: #080707;
-
+    --clr-pokemon-yellow: #ffc928;   /* Amarillo pastel más vivo */
+    --clr-auto-azul:     #4a90e2;    /* Azul pastel más vivo */
+    --clr-calc-rojo:     #fa5252;    /* Rojo pastel más vivo */
+    --clr-robot-gris:    #444444;    /* Gris pastel más vivo */
+    --clr-casa-verde:    #4fd18b;    /* Verde pastel más vivo */
+    --clr-crud-rosa:     #fa52b6;    /* Rosa pastel más vivo */
 }
 
 
@@ -48,6 +54,7 @@ header{
     padding-bottom: 1rem;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 
 header .container{
@@ -232,7 +239,7 @@ header .container .logos:hover .logoHover {
 }
 
 #sobre-mi .habilidades img{
-  width: 4rem;
+  height: 4rem;
 }
 
 #sobre-mi .habilidades .hard-skills{
@@ -284,4 +291,271 @@ header .container .logos:hover .logoHover {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* PROYECTOS */
+
+#proyectos{
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  gap: 3rem;
+  align-items: center;
+}
+
+#proyectos .grid{
+  display: grid;
+  /* padding: 0 5vw; */
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: Auto Auto;
+  gap: 3rem;
+}
+
+#proyectos .grid .item{
+  color: var(--clr-white);
+  border: solid 3px rgba(207, 206, 206, 0.187);
+  text-shadow: #1313134b 0px 0px 7px;
+
+background-color: var(--clr-robot-gris);
+
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden; /* Para que la franja no sobresalga */
+}
+#proyectos .grid .item h3{
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+#proyectos .grid .item p{
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+#proyectos .grid .item .preview{
+  margin: 1rem 0.5rem 0.5rem 0.5rem; 
+  border-radius: 6px;
+  box-shadow: #080707 0px 0px 10px;
+}
+#proyectos .grid .item .action{
+background: linear-gradient(
+    to top,
+    var(--clr-robot-gris) 70%,
+    rgba(255,255,0,0) 100%
+  );  
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Alinea el botón a la derecha */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  z-index: 2; /* Para que esté por delante de la imagen */
+}
+#proyectos .grid .item .action .tecnologias{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+#proyectos .grid .item .action .tecnologias img{
+  height: 1.3rem;
+  border-radius: 4px;
+}
+#proyectos .grid .item .action a button{
+  background: var(--clr-dark);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* INDIVIDUALES */
+/* #proyectos .grid .item.pokedex{
+  background-color: var(--clr-pokemon-yellow);
+}
+#proyectos .grid .item.pokedex .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-pokemon-yellow) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+}
+
+#proyectos .grid .item.calculadora{
+  background-color: var(--clr-calc-rojo);
+}
+#proyectos .grid .item.calculadora .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-calc-rojo) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+}
+
+#proyectos .grid .item.auto{
+  background-color: var(--clr-auto-azul);
+}
+#proyectos .grid .item.auto .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-auto-azul) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+}
+
+#proyectos .grid .item.robot{
+  background-color: var(--clr-robot-gris);
+}
+#proyectos .grid .item.robot .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-robot-gris) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+}
+
+#proyectos .grid .item.casa{
+  background-color: var(--clr-casa-verde);
+}
+#proyectos .grid .item.casa .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-casa-verde) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+}
+
+#proyectos .grid .item.crud{
+  background-color: var(--clr-crud-rosa);
+}
+#proyectos .grid .item.crud .action{
+    background: linear-gradient(
+    to top,
+    var(--clr-crud-rosa) 70%,
+    rgba(255,255,0,0) 100%
+    );  
+} */
+
+
+/* FOOTER */
+footer{
+    background: var(--clr-gold);
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end; 
+
+    color: var(--clr-white);
+    font-size: 0.9rem;
+}
+
+footer .container{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: normal;
+    color: var(--clr-white);
+}
+footer h3{
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+footer a{
+color: var(--clr-white);
+}
+
+footer .logos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .logos a{
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+footer .logos .link{
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--clr-gold-dark); 
+    border: solid 1px rgba(207, 206, 206, 0.187);
+    border-left: none;
+}
+
+footer .logos i{
+    font-size: 2.8rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+footer .logos i:hover{
+    transform: scale(1.1);
+}
+
+footer .contacto .email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 2.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer .contacto ul{
+    list-style-type: none;
+}
+footer .contacto .gmail, footer .contacto .copy{
+    height: 100%;
+    border: solid 1px var(--clr-gold-dark);
+}
+
+footer .contacto .gmail{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    padding: 0px 13px;
+}
+
+footer .contacto .copy{
+    background-color: var(--clr-gold-dark);
+    border-left: none;
+    padding: 0px 11px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+footer .copyright{
+    background-color: var(--clr-gold-dark);
+    color: var(--clr-gold);
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
 }
