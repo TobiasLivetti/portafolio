@@ -15,3 +15,15 @@ var typed = new Typed('.typed', {
 	cursorChar: '|', // Caracter para el cursor
 	contentType: 'html', // 'html' o 'null' para texto sin formato
 });
+
+const copyEmail = () => {
+	const email = "tobiaslivetti@gmail.com";
+	navigator.clipboard.writeText(email);
+
+	const tooltip = document.getElementById("tooltip");
+	tooltip.classList.add("show");
+	
+	setTimeout(() => {
+		tooltip.classList.remove("show");
+	}, 2000);
+}
