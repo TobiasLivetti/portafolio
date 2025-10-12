@@ -90,7 +90,24 @@ header .container .logos:hover .logoHover {
     opacity: 1;
 }
 
-/* 12 */
+header nav .botones{
+  transition:
+    opacity 0.25s ease,
+    max-height 0.25s ease,
+    transform 0.25s ease;
+  will-change: opacity, max-height, transform;
+  max-height: 25vh;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+}
+header nav .botones.no-visible{
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
 .custom-btn {
     width: 130px;
     height: 40px;
@@ -265,7 +282,15 @@ header .container .logos:hover .logoHover {
   margin: 1rem ;
   font-size: 2.5rem;
   line-height: 1;
+  transition: transform 800ms;
 }
+
+/* #sobre-mi .habilidades .hard-skills:hover h3{
+  transform: rotateX(8deg) rotateY(-10deg) rotateZ(-1deg);
+}
+#sobre-mi .habilidades .study:hover h3{
+  transform: rotateX(8deg) rotateY(10deg) rotateZ(1deg);
+} */
 
 /* margenes individuales */
 #sobre-mi .habilidades .hard-skills h3{
@@ -514,7 +539,7 @@ footer .logos i{
 }
 
 footer .logos a:hover i{
-    transform: scale(1.1);
+    transform: rotateX(8deg) rotateY(-10deg) rotateZ(-1deg);
 }
 
 footer .contacto .email{

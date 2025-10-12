@@ -27,3 +27,27 @@ const copyEmail = () => {
 		tooltip.classList.remove("show");
 	}, 2000);
 }
+
+const buttons = document.querySelector('.botones');
+
+// Elemento que observamos
+const hero = document.getElementById('hero');
+
+// Creamos el observador
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Si #sobre-mi está visible al 75% o más
+      buttons.classList.add('no-visible');
+    } else {
+      // Si deja de estar visible al 75%
+      buttons.classList.remove('no-visible');
+    }
+  });
+}, {
+  threshold: 0.35 // 🔹 Se activa cuando el 75% del elemento entra en el viewport
+});
+
+// Empezamos a observar
+observer.observe(hero);
+
